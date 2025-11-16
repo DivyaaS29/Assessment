@@ -1,0 +1,137 @@
+/* students/css/style.css
+   Modern SafeAr login style
+*/
+
+:root{
+  --safear-blue: #0b3d91;
+  --safear-accent:#f39c12;
+  --bg-1: #0f1724;      /* dark background top */
+  --bg-2: #f8fafc;      /* light page background */
+  --muted: #6b7280;
+  --card-radius: 12px;
+  --glass: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg-1) 0%, #07102a 30%, #0b2a5a 60%, var(--bg-2) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+/* Center container */
+.login-wrap{
+  width:100%;
+  max-width:980px;
+  display:flex;
+  gap:28px;
+  align-items:stretch;
+  justify-content:center;
+}
+
+/* Left hero (illustration/branding) */
+.login-hero{
+  flex:1.05;
+  background: linear-gradient(180deg, rgba(11,61,145,0.95), rgba(11,61,145,0.85));
+  color:#fff;
+  border-radius: var(--card-radius);
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:20px;
+  min-height:420px;
+  box-shadow: 0 12px 30px rgba(11,61,145,0.14);
+}
+.login-hero h1{font-size:28px; margin:0 0 8px; font-weight:700}
+.login-hero p{margin:0; color:rgba(255,255,255,0.92); line-height:1.4}
+.login-hero .hero-actions{margin-top:12px}
+.login-hero .logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.login-hero .logo img{height:44px; width:auto; border-radius:6px;}
+
+/* Right: the card form */
+.login-card{
+  width:380px;
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding:26px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.18);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:420px;
+}
+
+/* Head inside card */
+.login-card h3{margin:0 0 6px;font-size:20px;color:#0b2a5a}
+.login-card p.lead{margin:0 0 16px;color:var(--muted)}
+
+/* Form controls */
+.form-group{margin-bottom:14px}
+.form-control{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  font-size:14px;
+  outline:none;
+  transition:box-shadow .15s, border-color .15s, transform .06s;
+  background:#fff;
+}
+.form-control:focus{
+  border-color: var(--safear-blue);
+  box-shadow: 0 6px 18px rgba(11,61,145,0.06);
+}
+
+/* actions */
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-primary{
+  background:var(--safear-blue);
+  color:#fff;
+  width:100%;
+  box-shadow: 0 8px 20px rgba(11,61,145,0.12);
+}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-outline{
+  background:transparent;
+  border:1px solid #e6e9ef;
+  color:var(--safear-blue);
+}
+
+/* small helpers */
+.text-muted{color:var(--muted);font-size:13px}
+.form-foot{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+.linkless{color:var(--safear-blue);text-decoration:none;font-weight:600}
+
+/* responsive adjustments */
+@media (max-width:920px){
+  .login-wrap{flex-direction:column;max-width:520px;padding:12px}
+  .login-hero{order:2;border-radius:10px;padding:20px}
+  .login-card{order:1;width:100%}
+  body{padding:18px}
+}
+
+/* optional small touches for exam UI inside students folder */
+.rbtn{
+  background:transparent;border:1px solid #cbd5e1;padding:8px 12px;border-radius:8px;cursor:pointer;color:#0b2a5a;
+}
+.btn.small{padding:6px 10px;font-size:13px}

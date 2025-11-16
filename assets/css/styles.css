@@ -1,0 +1,17 @@
+/* Dashboard additions for SafeAr student portal */
+
+:root { --primary: #0b3d91; --muted: #6c757d; --card-radius: 10px; }
+
+aside .card { border-radius: 10px; }
+aside .card img { border-radius: 50%; border: 3px solid rgba(11,61,145,0.08); }
+.nav-link { color: #0b3d91; padding-left: 0; }
+.nav-link:hover { text-decoration: none; color: #08306b; }
+.card .card-title { font-weight: 600; color: #073066; }
+.list-group-item { border: 0; border-bottom: 1px solid #eef2f7; }
+.list-group-item:last-child { border-bottom: 0; }
+.home-section .card { border-radius: var(--card-radius); }
+.card .h4 { color: var(--primary); }
+@media (max-width: 991px) {
+  aside { order: 2; }
+  section { order: 1; }
+}
